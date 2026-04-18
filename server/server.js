@@ -23,12 +23,13 @@ await connectCloudinary();
 const allowedOrigins = ['http://localhost:5173', 'https://freshmart-khaki.vercel.app']
 
 
-app.post('/stripe', express.raw({type: 'application/json'}), stripeWebhooks);
+
 
 // Middleware Configuration
-app.use(express.json());
 app.use(cookieParser());
 app.use(cors({origin: allowedOrigins, credentials: true}));
+app.post('/stripe', express.raw({type: 'application/json'}), stripeWebhooks);
+app.use(express.json());
 
 
 app.get('/', (req, res) => {

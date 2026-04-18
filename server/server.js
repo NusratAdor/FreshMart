@@ -28,14 +28,6 @@ const allowedOrigins = ['http://localhost:5173', 'https://freshmart-khaki.vercel
 // Middleware Configuration
 app.use(cookieParser());
 app.use(cors({origin: allowedOrigins, credentials: true}));
-
-// Disable caching for all API routes — prevents Vercel from stripping cookies
-app.use((req, res, next) => {
-  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, private');
-  next();
-});
-
-
 app.use(express.json());
 app.post('/stripe', express.raw({type: 'application/json'}), stripeWebhooks);
 

@@ -1,5 +1,5 @@
 import cookieParser from 'cookie-parser';
-import express from 'express';
+import express, { application } from 'express'
 import cors from 'cors';
 import connectDB from './configs/db.js';
 import 'dotenv/config';
@@ -18,32 +18,24 @@ const port = process.env.PORT || 4000;
 await connectDB();
 await connectCloudinary();
 
-const allowedOrigins = [
-  'http://localhost:5173',
-  'https://freshmart-khaki.vercel.app'  // your exact frontend URL, no trailing slash
-];
 
-// ✅ CORS and cookies FIRST — before any route
-app.use(cors({
-  origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true,
-}));
+// Allow multiple origins
+const allowedOrigins = ['http://localhost:5173', 'https://freshmart-khaki.vercel.app']
 
+
+
+
+// Middleware Configuration
 app.use(cookieParser());
-
-// ✅ Stripe webhook needs raw body — register BEFORE express.json()
-app.post('/stripe', express.raw({ type: 'application/json' }), stripeWebhooks);
-
-// ✅ JSON parsing for all other routes
+app.use(cors({origin: allowedOrigins, credentials: true}));
 app.use(express.json());
+app.post('/stripe', express.raw({type: 'application/json'}), stripeWebhooks);
 
-app.get('/', (req, res) => res.send('API is working'));
+
+app.get('/', (req, res) => {
+    res.send("API is working");
+})
+
 
 app.use('/api/user', userRouter);
 app.use('/api/seller', sellerRouter);
@@ -52,6 +44,7 @@ app.use('/api/cart', cartRouter);
 app.use('/api/address', addressRouter);
 app.use('/api/order', orderRouter);
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
+
+app.listen(port, ()=> {
+    console.log(`Server is running on http://localhost:${port}`)
+})     

@@ -22,7 +22,7 @@ export const AppContextProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState({});
   const [searchQuery, setSearchQuery] = useState({});
   const [loading, setLoading] = useState(true);
-  const [isUserReady, setIsUserReady] = useState(false); 
+
   // Fetch Seller Status
   const fetchSeller = async () => {
     try {
@@ -52,8 +52,6 @@ export const AppContextProvider = ({ children }) => {
       }
     } catch (error) {
       setUser(null);
-    } finally{
-      setIsUserReady(true);  // ✅ mark ready AFTER cart is loaded from DB
     }
   };
 
@@ -150,7 +148,7 @@ export const AppContextProvider = ({ children }) => {
       }
     };
 
-    if(user && isUserReady){
+    if(user){
         updateCart();
     }
       

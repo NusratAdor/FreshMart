@@ -4,18 +4,17 @@ const authUser = async (req, res, next) => {
   const { token } = req.cookies;
 
   if (!token) {
-    return res.json({ success: false, message: "Unauthorized" });
+    res.status(401).json({ success: false, message: "Unauthorized" });
   }
-
 
   try {
     const tokenDecode = jwt.verify(token, process.env.JWT_SECRET);
-    if (tokenDecode.id) {
-      req.userId = tokenDecode.id;
-    } else {
-      return res.json({ success: false, message: "Unauthorized" });
+    if (!tokenDecode.id) {
+      return res.status(401).json({ success: false, message: "Unauthorized" });
     }
+    req.userId = tokenDecode.id;
     next();
+    
   } catch (error) {
     res.json({ success: false, message: error.message });
   }

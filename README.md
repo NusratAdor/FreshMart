@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛒 FreshMart — MERN E-Commerce Platform
+# 🛒 FreshMart — E-Commerce Platform
 
 <p>
 A modern full-stack e-commerce platform for fresh products built with the MERN stack, Stripe payments, Cloudinary image storage, and seller management features.

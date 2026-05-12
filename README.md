@@ -1,32 +1,32 @@
-# FreshMart 🛒
+<div align="center">
 
-A full-stack e-commerce platform for fresh products built with the MERN stack. FreshMart provides a seamless shopping experience with user authentication, seller dashboard, shopping cart, and order management.
+# 🛒 FreshMart — MERN E-Commerce Platform
+
+<p>
+A modern full-stack e-commerce platform for fresh products built with the MERN stack, Stripe payments, Cloudinary image storage, and seller management features.
+</p>
+
+<p>
+  <a href="https://freshmart-khaki.vercel.app/">
+    <img src="https://img.shields.io/badge/Live%20Demo-Visit-blue?style=for-the-badge&logo=vercel" alt="Live Demo">
+  </a>
+
+  <a href="https://github.com/NusratAdor/FreshMart">
+    <img src="https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github" alt="GitHub Repository">
+  </a>
+
+  <a href="./LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License">
+  </a>
+</p>
+
+</div>
 
 ---
 
-## 🚀 Tech Stack
+## 🌐 Live Demo
 
-### Frontend
-
-- **React** — UI library for building the interface
-- **Vite** — Fast build tool and development server
-- **Tailwind CSS** — Utility-first CSS framework
-- **React Router** — Client-side routing
-- **Axios** — HTTP client for API requests
-- **React Hot Toast** — Toast notifications
-
-### Backend
-
-- **Express.js** — Web framework for Node.js
-- **MongoDB** — NoSQL database with Mongoose ODM
-- **JSON Web Token (JWT)** — Authentication
-- **bcryptjs** — Password hashing
-- **Multer** — File upload middleware
-- **Cloudinary** — Cloud image storage
-
-### Payment
-
-- **Stripe** — Payment processing
+🔗 **https://freshmart-khaki.vercel.app/**
 
 ---
 
@@ -34,295 +34,291 @@ A full-stack e-commerce platform for fresh products built with the MERN stack. F
 
 ### 👤 Customer Features
 
-- **User Authentication** — Register and login with secure JWT-based authentication
-- **Product Browsing** — Browse all products or filter by category
-- **Product Search** — Search products by name or category
-- **Product Details** — View detailed product information
-- **Shopping Cart** — Add/remove items, update quantities
-- **Checkout** — Secure checkout with Stripe payment
-- **Order Management** — View order history and status
-- **Address Management** — Save and manage delivery addresses
+- Secure JWT-based user authentication
+- Browse products by category
+- Product search and filtering
+- Detailed product pages
+- Shopping cart functionality
+- Stripe payment integration
+- Order management system
+- Delivery address management
+- Persistent login sessions
 
 ### 🏪 Seller Features
 
-- **Seller Authentication** — Separate login for sellers
-- **Add Products** — Create new product listings with images
-- **Product Management** — View and manage product inventory
-- **Order Management** — View and manage customer orders
+- Separate seller authentication
+- Seller dashboard for product management
+- Add and manage product inventory
+- Upload product images with Cloudinary
+- Order management for sellers
 
-### 🛠️ System Features
+### 📱 Modern User Experience
 
-- **Responsive Design** — Works on mobile, tablet, and desktop
-- **Loading States** — Smooth loading indicators
-- **Error Handling** — User-friendly error messages via toasts
-- **Session Management** — Persistent login with cookies
+- Fully responsive design
+- Fast frontend powered by Vite
+- Smooth toast notifications
+- Optimized shopping workflow
+- Mobile-friendly UI with Tailwind CSS
+
+---
+
+## 🔌 Backend & API Features
+
+- RESTful API architecture
+- JWT authentication & authorization
+- Secure password hashing using bcryptjs
+- Cloudinary image upload integration
+- Stripe payment processing
+- Modular backend structure
+- Protected seller routes
+- Centralized API handling
+
+---
+
+## 💡 Why I Built This
+
+I built FreshMart to explore scalable MERN-stack e-commerce architecture, authentication systems, payment integration, image management, seller workflows, and production-ready backend API development.
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+| Technology | Purpose |
+|---|---|
+| React.js | UI framework |
+| Vite | Frontend tooling |
+| Tailwind CSS | Styling |
+| React Router DOM | Client-side routing |
+| Axios | API requests |
+| React Hot Toast | Notifications |
+
+### Backend
+
+| Technology | Purpose |
+|---|---|
+| Node.js + Express.js | Backend server |
+| MongoDB + Mongoose | Database & ODM |
+| JWT | Authentication |
+| bcryptjs | Password hashing |
+| Multer | File uploads |
+| Cloudinary | Cloud image storage |
+| Stripe | Payment processing |
+
+### Deployment & Infrastructure
+
+| Technology | Purpose |
+|---|---|
+| Vercel | Frontend deployment |
+| Render / Railway | Backend deployment |
+| MongoDB Atlas | Cloud database hosting |
+| Cloudinary | Media management |
+
+---
+
+## 📸 Screenshots
+
+### Homepage
+![Homepage](./screenshots/homepage.png)
+
+### Product Details
+![Product Details](./screenshots/product-details.png)
+
+### Shopping Cart
+![Shopping Cart](./screenshots/cart.png)
+
+### Seller Dashboard
+![Seller Dashboard](./screenshots/seller-dashboard.png)
+
+### Orders Page
+![Orders](./screenshots/orders.png)
+
+---
+
+## ⚙️ Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- MongoDB Atlas account
+- Cloudinary account
+- Stripe account
+
+---
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/NusratAdor/FreshMart.git
+cd freshmart
+```
+
+---
+
+### 2. Install dependencies
+
+```bash
+# Install backend dependencies
+cd server && npm install
+
+# Install frontend dependencies
+cd ../client && npm install
+```
+
+---
+
+### 3. Configure environment variables
+
+Create a `.env` file inside the `server/` directory:
+
+```env
+PORT=4000
+
+MONGODB_URI=
+
+JWT_SECRET=
+
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+
+STRIPE_SECRET_KEY=
+
+CLIENT_URL=http://localhost:5173
+
+NODE_ENV=development
+```
+
+Create a `.env` file inside the `client/` directory:
+
+```env
+VITE_BACKEND_URL=http://localhost:4000
+VITE_CURRENCY=$
+```
+
+---
+
+### 4. Run development servers
+
+```bash
+# Start backend server
+cd server
+npm run server
+```
+
+```bash
+# Start frontend server
+cd client
+npm run dev
+```
+
+Frontend runs at:
+
+```txt
+http://localhost:5173
+```
+
+Backend runs at:
+
+```txt
+http://localhost:4000
+```
 
 ---
 
 ## 📁 Project Structure
 
-```
-FreshMart/
-├── client/                 # React Frontend
+```txt
+freshmart/
+├── client/                     # React frontend
 │   ├── public/
 │   ├── src/
-│   │   ├── assets/        # Static assets
-│   │   ├── components/   # Reusable React components
-│   │   │   ├── Navbar.jsx
-│   │   │   ├── Footer.jsx
-│   │   │   ├── Login.jsx
-│   │   │   ├── ProductCard.jsx
-│   │   │   ├── Categories.jsx
-│   │   │   ├── BestSeller.jsx
-│   │   │   └── seller/
-│   │   ├── context/      # React Context for state management
-│   │   ├── pages/        # Page components
-│   │   │   ├── Home.jsx
-│   │   │   ├── AllProducts.jsx
-│   │   │   ├── ProductCategory.jsx
-│   │   │   ├── ProductDetails.jsx
-│   │   │   ├── Cart.jsx
-│   │   │   ├── MyOrders.jsx
-│   │   │   ├── AddAddress.jsx
-│   │   │   └── seller/
-│   │   ├── App.jsx       # Main app component
-│   │   ├── main.jsx       # Entry point
-│   │   └── index.css     # Global styles
+│   │   ├── assets/             # Static assets
+│   │   ├── components/         # Reusable UI components
+│   │   ├── context/            # React Context API
+│   │   ├── pages/              # Application pages
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
 │   ├── package.json
 │   └── vite.config.js
 │
-├── server/                 # Express Backend
-│   ├── configs/           # Configuration files
-│   │   ├── db.js         # MongoDB connection
-│   │   ├── cloudinary.js # Cloudinary config
-│   │   └── multer.js     # File upload config
-│   ├── controllers/      # Route controllers
-│   │   ├── userController.js
-│   │   ├── sellerController.js
-│   │   ├── productController.js
-│   │   ├── cartController.js
-│   │   ├── orderController.js
-│   │   └── addressController.js
-│   ├── middlewares/      # Custom middleware
-│   │   ├── authUser.js
-│   │   └── authSeller.js
-│   ├── models/           # Mongoose models
-│   │   ├── User.js
-│   │   ├── Product.js
-│   │   ├── Order.js
-│   │   └── Address.js
-│   ├── routes/           # API routes
-│   ├── server.js         # Server entry point
+├── server/                     # Express backend
+│   ├── configs/                # Database & cloud configs
+│   ├── controllers/            # API controllers
+│   ├── middlewares/            # Authentication middlewares
+│   ├── models/                 # Mongoose models
+│   ├── routes/                 # API route definitions
+│   ├── server.js               # Backend entry point
 │   └── package.json
 │
-└── README.md
+├── screenshots/                # README screenshots
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-## 🛠️ Installation & Setup
+## 🏗️ Architecture Overview
 
-### Prerequisites
+```txt
+React Frontend
+      ↓
+REST API (Express.js)
+      ↓
+MongoDB Database
 
-- Node.js (v18+)
-- MongoDB (local or Atlas)
-- Cloudinary account (for image storage)
-- Stripe account (for payments)
+JWT Authentication
+      ↓
+Protected Routes
 
-### 1. Clone the Repository
+Stripe Payments
+      ↓
+Order Processing
 
-```bash
-git clone <repository-url>
-cd FreshMart
-```
-
-### 2. Backend Setup
-
-```bash
-cd server
-npm install
-```
-
-Create a `.env` file in the `server` directory:
-
-```env
-PORT=4000
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret_key
-CLOUDINARY_API_KEY=your_cloudinary_api_key
-CLOUDINARY_API_SECRET=your_cloudinary_api_secret
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-STRIPE_SECRET_KEY=your_stripe_secret_key
-CLIENT_URL=http://localhost:5173
-```
-
-Start the backend server:
-
-```bash
-npm run server
-# or
-node server.js
-```
-
-### 3. Frontend Setup
-
-```bash
-cd client
-npm install
-```
-
-Create a `.env` file in the `client` directory:
-
-```env
-VITE_BACKEND_URL=http://localhost:4000
-VITE_CURRENCY=$
-```
-
-Start the frontend development server:
-
-```bash
-npm run dev
-```
-
-The application will be available at `http://localhost:5173`
-
----
-
-## 🔌 API Endpoints
-
-### User Routes (`/api/user`)
-
-| Method | Endpoint    | Description                 |
-| ------ | ----------- | --------------------------- |
-| POST   | `/register` | Register a new user         |
-| POST   | `/login`    | User login                  |
-| GET    | `/is-auth`  | Check authentication status |
-| POST   | `/logout`   | User logout                 |
-
-### Seller Routes (`/api/seller`)
-
-| Method | Endpoint    | Description                 |
-| ------ | ----------- | --------------------------- |
-| POST   | `/register` | Register a new seller       |
-| POST   | `/login`    | Seller login                |
-| GET    | `/is-auth`  | Check seller authentication |
-| GET    | `/orders`   | Get seller's orders         |
-
-### Product Routes (`/api/product`)
-
-| Method | Endpoint          | Description              |
-| ------ | ----------------- | ------------------------ |
-| GET    | `/list`           | Get all products         |
-| GET    | `/list/:category` | Get products by category |
-| GET    | `/single/:id`     | Get single product       |
-| POST   | `/add`            | Add new product (seller) |
-| PUT    | `/update`         | Update product (seller)  |
-| DELETE | `/delete/:id`     | Delete product (seller)  |
-
-### Cart Routes (`/api/cart`)
-
-| Method | Endpoint  | Description               |
-| ------ | --------- | ------------------------- |
-| GET    | `/get`    | Get user's cart           |
-| POST   | `/add`    | Add item to cart          |
-| POST   | `/update` | Update cart item quantity |
-
-### Order Routes (`/api/order`)
-
-| Method | Endpoint         | Description         |
-| ------ | ---------------- | ------------------- |
-| POST   | `/place`         | Place an order      |
-| GET    | `/user-orders`   | Get user's orders   |
-| GET    | `/seller-orders` | Get seller's orders |
-| PUT    | `/update-status` | Update order status |
-
-### Address Routes (`/api/address`)
-
-| Method | Endpoint  | Description          |
-| ------ | --------- | -------------------- |
-| GET    | `/get`    | Get user's addresses |
-| POST   | `/add`    | Add new address      |
-| PUT    | `/update` | Update address       |
-
----
-
-## 📱 Pages Overview
-
-| Page                 | Description                                            |
-| -------------------- | ------------------------------------------------------ |
-| **Home**             | Landing page with banner, categories, and best sellers |
-| **All Products**     | Grid view of all available products                    |
-| **Product Category** | Products filtered by specific category                 |
-| **Product Details**  | Detailed view of a single product                      |
-| **Cart**             | Shopping cart with quantity management                 |
-| **My Orders**        | User's order history                                   |
-| **Add Address**      | Form to add delivery address                           |
-| **Seller Dashboard** | Seller's product and order management                  |
-| **Login**            | User authentication modal                              |
-
----
-
-## 🔧 Environment Variables
-
-### Server (.env)
-
-```env
-PORT=4000
-MONGODB_URI=mongodb+srv://...
-JWT_SECRET=your_secret_key
-CLOUDINARY_API_KEY=your_key
-CLOUDINARY_API_SECRET=your_secret
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-STRIPE_SECRET_KEY=sk_test_...
-CLIENT_URL=http://localhost:5173
-```
-
-### Client (.env)
-
-```env
-VITE_BACKEND_URL=http://localhost:4000
-VITE_CURRENCY=$
+Cloudinary Uploads
+      ↓
+Product Image Storage
 ```
 
 ---
 
-## 🚀 Deployment
+## ☁️ Deployment
 
-### Frontend (Vercel)
-
-1. Push your code to GitHub
-2. Import the project in Vercel
-3. Add environment variables
-4. Deploy
-
-### Backend (Render/Railway)
-
-1. Connect your GitHub repository
-2. Add environment variables
-3. Deploy
+- Frontend deployed on Vercel
+- Backend deployed on Render or Railway
+- MongoDB database hosted on MongoDB Atlas
+- Product images managed via Cloudinary
+- Payments powered by Stripe
 
 ---
 
-## 🤝 Contributing
+## 🚀 Future Improvements
 
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature-name`)
-3. Make your changes
-4. Commit and push to your fork
-5. Create a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the ISC License.
+- [ ] Wishlist functionality
+- [ ] Product reviews & ratings
+- [ ] Real-time order tracking
+- [ ] Admin analytics dashboard
+- [ ] Coupon & discount system
+- [ ] Multi-language support
 
 ---
 
-## 🙏 Acknowledgments
+## 👩‍💻 Author
 
-- [React](https://react.dev/)
-- [MongoDB](https://www.mongodb.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Stripe](https://stripe.com/)
-- [Cloudinary](https://cloudinary.com/)
+**Nusrat Ador**  
+📧 [nusratjahan141462@gmail.com](mailto:nusratjahan141462@gmail.com)  
+🔗 GitHub: https://github.com/NusratAdor
+
+---
+
+## 🚀 Future Goals
+
+This project is continuously evolving with improvements focused on scalable MERN architecture, advanced seller workflows, payment systems, and modern e-commerce experiences.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.

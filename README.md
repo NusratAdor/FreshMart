@@ -185,7 +185,7 @@ CLOUDINARY_API_SECRET=
 
 STRIPE_SECRET_KEY=
 
-CLIENT_URL=http://localhost:5173
+CLIENT_URL=
 
 NODE_ENV=development
 ```
@@ -193,7 +193,7 @@ NODE_ENV=development
 Create a `.env` file inside the `client/` directory:
 
 ```env
-VITE_BACKEND_URL=http://localhost:4000
+VITE_BACKEND_URL=
 VITE_CURRENCY=$
 ```
 
